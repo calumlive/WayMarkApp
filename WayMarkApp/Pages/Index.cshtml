@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<h1>All Submissions </h1>
+@foreach (var submission in Model.Submissions)
+{
+
+    <p>@submission.Id - @submission.Name - @submission.Age</p>
+
+}
+
+<a href="?sortby=age">Sort By Age</a>
+<br />
+<a href="?sortby=age&reverse=true">Reverse String</a>
+<br />
+<a href="?sortby=age&reverse=true&save=true">Save</a>
